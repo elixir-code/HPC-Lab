@@ -1,0 +1,116 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+
+\usepackage{graphicx}
+\usepackage{anyfontsize}
+
+% opening details
+\title{High Performance Computing}
+\subtitle{\small{using OpenMP, OpenMPI and CUDA}}
+
+\author[R Mukesh]{R Mukesh\\{\scriptsize  Instructor: \href{https://scholar.google.co.in/citations?user=sbzsjNcAAAAJ&hl=en&oi=sra}{\textbf{Dr. Noor Mahammad}}}}
+
+\institute{IIITDM Kancheepuram}
+\logo{\includegraphics[width=1.2cm]{iiitdmlogo}}
+
+\date{July-November 2018}
+
+\begin{document}
+	
+	{
+		% title page
+		\setbeamertemplate{logo}{}
+		\begin{frame}
+			\titlepage
+			\centering
+			\includegraphics[height=2cm]{iiitdmlogo}
+		\end{frame}
+	}
+	
+	\begin{frame}{Content Overview}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introduction to High Performance Computing}
+		\begin{frame}{Introduction to High Performance Computing}
+			High Performance Computing refers to solving highly resource-intensive problems quickly and efficiently, mostly through use of \textbf{parallel computing} infrastructure at multiple levels.
+			\linebreak
+			\begin{itemize}
+				\item Using shared memory multi-core and (or) multi-processor environment (OpenMP)
+				\item Using distributed memory cluster of computers (OpenMPI)
+				\item Using vector processors (CUDA)
+			\end{itemize}
+			
+		\end{frame}
+	
+	\section{OpenMP}
+		% openmp title page		
+		\begin{frame}
+			\begin{columns}
+				\begin{column}{0.3\textwidth}
+					\includegraphics[width=3cm]{openmplogo}		
+				\end{column}
+			
+				\begin{column}{0.7\textwidth}
+					\begin{block}{}
+						\vspace{8pt}
+						\centering
+						\textbf{\Huge{OpenMP}}
+						\linebreak
+						{\small (Open Multi-Processing API)}
+						\vspace{6pt}
+					\end{block}
+				\end{column}
+			\end{columns}
+			
+		\end{frame}
+		
+		\subsection{Introduction to OpenMP}
+			\begin{frame}{Introduction to OpenMP}
+				\begin{itemize}
+					\item OpenMP (Open Multi-Processing) is an API for shared memory multi-threading or multi-processing programming using C/C++ and FORTRAN.
+					\linebreak
+					\item OpenMP offers a rich set of compiler directives, library runtimes and environment variables that simplify creation and synchronisation of threads.
+				\end{itemize}
+			\end{frame}	
+			
+		\subsection{Array and Matrix Operations}
+			\begin{frame}{Exercise 1}
+				\begin{enumerate}[(a)]
+					\item Write a program to perform operations on array elements with and without using OpenMP programming and calculate the parallel fraction f. For example: $A[i] = (i+1)*2.0;$
+					\linebreak
+					\item Write a program to add two matrices with and without using OpenMP programming and calculate the parallel fraction f.
+				\end{enumerate}
+				
+				\begin{block}{}
+					\small
+					Run the programs for 1, 2, 4, 8, 10, 12, 14, 18. 22, 26, 30, 34, 38, 42. 46, 50, 54, 58 and 62 threads. Note down the time taken and draw graph between number of threads and time taken.
+				\end{block}
+			\end{frame}
+			
+		\subsection{Matrix Multiplication}
+			\begin{frame}{Exercise 2}
+				Write program to perform matrix multiplication on row-major, column-major and block matrices.
+
+				\begin{enumerate}[(a)]
+					\item Run the program without OpenMP and note down the performance.
+					\item Run the program with OpenMP for varying number of threads and note down the performance.
+					\item Plot the graph between number of threads and execution time.
+					\item Calculate the parallel fraction f.
+				\end{enumerate}
+			\end{frame}
+		
+		\subsection{Mean Filter}
+			\begin{frame}{Exercise 3}
+				Write a program to perform mean filtering on three random image matrices each of size 384 x 512.
+				\begin{enumerate}[(a)]
+					\item Write the programs in OpenMP with and without using sections.
+					\item Run the program for 1, 2, 4, 6, 8, 12, 16, 20, 24, 28, 32 threads and plot the graph between number of threads and execution time.
+				\end{enumerate}
+				
+				\begin{block}{}
+					\scriptsize \textbf{Note:} Using sections, computation would be performed on all matrices parallely, whereas otherwise computations on the matrices would be performed sequentially, i.e., matrix after matrix.
+				\end{block}
+			\end{frame}
+			
+\end{document}
