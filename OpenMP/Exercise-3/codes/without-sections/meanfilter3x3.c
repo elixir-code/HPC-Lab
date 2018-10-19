@@ -49,17 +49,17 @@ int main(void)
 		#pragma omp parallel for default(none) shared(redmeanfilteredmatrix, redmatrix) private(i, j) num_threads(NUM_THREADS[num_threads_index]) collapse(2)
 		for(i=0; i<(M-2); ++i)
 			for(j=0; j<(N-2); ++j)
-				*(*(redmeanfilteredmatrix + i) + j) = ( *(*(redmatrix+i)+j) + *(*(redmatrix+i)+j+1) + *(*(redmatrix+i)+j+2) + *(*(redmatrix+i+1)+j) + *(*(redmatrix+i+1)+j+1) + *(*(redmatrix+i+1)+j+2) + *(*(redmatrix+i+2)+j) + *(*(redmatrix+i+2)+j+1) + *(*(redmatrix+i+2)+j+2) )/9;
+				*(*(redmeanfilteredmatrix + i) + j) = 0.111111 * *(*(redmatrix+i)+j) + 0.111111 * *(*(redmatrix+i)+j+1) + 0.111111 * *(*(redmatrix+i)+j+2) + 0.111111 * *(*(redmatrix+i+1)+j) + 0.111111 * *(*(redmatrix+i+1)+j+1) + 0.111111 * *(*(redmatrix+i+1)+j+2) + 0.111111 * *(*(redmatrix+i+2)+j) + 0.111111 * *(*(redmatrix+i+2)+j+1) + 0.111111 * *(*(redmatrix+i+2)+j+2);
 
 		#pragma omp parallel for default(none) shared(greenmeanfilteredmatrix, greenmatrix) private(i, j) num_threads(NUM_THREADS[num_threads_index]) collapse(2)
 		for(i=0; i<(M-2); ++i)
 			for(j=0; j<(N-2); ++j)
-				*(*(greenmeanfilteredmatrix + i) + j) = ( *(*(greenmatrix+i)+j) + *(*(greenmatrix+i)+j+1) + *(*(greenmatrix+i)+j+2) + *(*(greenmatrix+i+1)+j) + *(*(greenmatrix+i+1)+j+1) + *(*(greenmatrix+i+1)+j+2) + *(*(greenmatrix+i+2)+j) + *(*(greenmatrix+i+2)+j+1) + *(*(greenmatrix+i+2)+j+2) )/9;
+				*(*(greenmeanfilteredmatrix + i) + j) = 0.111111 * *(*(greenmatrix+i)+j) + 0.111111 * *(*(greenmatrix+i)+j+1) + 0.111111 * *(*(greenmatrix+i)+j+2) + 0.111111 * *(*(greenmatrix+i+1)+j) + 0.111111 * *(*(greenmatrix+i+1)+j+1) + 0.111111 * *(*(greenmatrix+i+1)+j+2) + 0.111111 * *(*(greenmatrix+i+2)+j) + 0.111111 * *(*(greenmatrix+i+2)+j+1) + 0.111111 * *(*(greenmatrix+i+2)+j+2);
 
 		#pragma omp parallel for default(none) shared(bluemeanfilteredmatrix, bluematrix) private(i, j) num_threads(NUM_THREADS[num_threads_index]) collapse(2)
 		for(i=0; i<(M-2); ++i)
 			for(j=0; j<(N-2); ++j)
-				*(*(bluemeanfilteredmatrix + i) + j) = ( *(*(bluematrix+i)+j) + *(*(bluematrix+i)+j+1) + *(*(bluematrix+i)+j+2) + *(*(bluematrix+i+1)+j) + *(*(bluematrix+i+1)+j+1) + *(*(bluematrix+i+1)+j+2) + *(*(bluematrix+i+2)+j) + *(*(bluematrix+i+2)+j+1) + *(*(bluematrix+i+2)+j+2) )/9;
+				*(*(bluemeanfilteredmatrix + i) + j) = 0.111111 * *(*(bluematrix+i)+j) + 0.111111 * *(*(bluematrix+i)+j+1) + 0.111111 * *(*(bluematrix+i)+j+2) + 0.111111 * *(*(bluematrix+i+1)+j) + 0.111111 * *(*(bluematrix+i+1)+j+1) + 0.111111 * *(*(bluematrix+i+1)+j+2) + 0.111111 * *(*(bluematrix+i+2)+j) + 0.111111 * *(*(bluematrix+i+2)+j+1) + 0.111111 * *(*(bluematrix+i+2)+j+2);
 		
 		end_time = omp_get_wtime();
 		printf("No. of Threads = %d, time taken = %lf\n", NUM_THREADS[num_threads_index], (end_time - start_time));

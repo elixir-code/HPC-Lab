@@ -1,0 +1,99 @@
+\documentclass{article}
+
+% Add 'authorblk' package for affliation support
+\usepackage{authblk}
+
+% use package to control paper dimensions
+\usepackage{geometry}
+ \geometry{
+		a4paper,
+		% left=22mm,
+		% right=22mm,
+		top=20mm,
+		bottom=20mm
+	}
+	
+% use packages for code listings
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+\title{Analyzing Performance of Spatial-Domain Linear Filtering on Multi-Channel Images using OpenMP}
+\author{R Mukesh}
+\affil{IIITDM, Kancheepuram}
+
+\date{September 3, 2018}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		Typically, Image Processing Algorithms are massively parallelizable and are performed on specialized hardwares such as Graphics Processing units(GPUs) that offer high-throughput. This experiment aims to analyze the performance of parallelized Spatial-Domain linear filtering for multi-channel images using OpenMP.
+	\end{abstract}
+	
+	\section{Theory}
+	
+		\subsection{Spatial-Domain Linear Filtering}
+			\textbf{Linear Filtering} is neighborhood operation, in the which the value of any given pixel in the output image is represented as a linear function of the pixel values in the neighborhood of the corresponding input pixel. Linear filtering in spatial domain is performed using \textbf{convolution}.
+			
+			\textbf{Mean Filtering} is a linear filtering in which value of any given pixel in the ouput image is the mean of values of pixel in a \(kxk\) window centered at the corresponding input pixel (where k is an odd number).
+					
+		\subsection{Sections in OpenMP}
+			
+			The section construct in OpenMP is a way of distributing different independent blocks of codes (each performing a task) to different threads. The sytax of the sections construct is:
+			
+		\begin{lstlisting}[style=CStyle]
+			#pragma omp parallel
+			{
+				#pragma omp sections
+				{
+					#pragma omp section
+					{
+						//structured block 1
+					}
+					
+					#pragma omp section
+					{
+						//structured block 2
+					}
+					
+					#pragma omp section
+					{
+						//structured block 3
+					}
+					
+					...
+				}
+			}
+		\end{lstlisting}				
+			
+	\section{Results \protect\footnote{The experiments were conducted on a computer with 6\textsuperscript{th} Generation Intel(R) Core(TM) i7-6500U Processor (4M Cache, upto 3.10 GHz) and 4GB Single Channel DDR3L 1600M Hz (4GBx1) RAM.}}
+	
+		The experiments were conducted on a three-channel (red, green and blue) image of size 384x512 for varying size of filter kernels. Each section block performed mean filtering of one channel of the image.
+		
+	\section{Infererence}
+	
+	
+\end{document}

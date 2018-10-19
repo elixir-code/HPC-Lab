@@ -34,7 +34,7 @@ int main(){
 		for(l=0; l<N_ITERATIONS; ++l)
 		{
 			start_time = omp_get_wtime();
-			#pragma omp parallel for default(none) private(i,j) shared(A,B,C) num_threads(n_threads[k])
+			#pragma omp parallel for default(none) private(i,j) shared(A,B,C) num_threads(n_threads[k]) collapse(2)
 					for(i=0; i<M; ++i)
 						for(j=0; j<N; ++j)
 							C[i][j] = A[i][j]+B[i][j];
