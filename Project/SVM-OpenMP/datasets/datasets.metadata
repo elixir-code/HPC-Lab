@@ -1,0 +1,7 @@
+1. Dataset Name: a1a
+
+Source: UCI/Adult
+
+# of classes  : 2
+# of data     : 1605/30956 (testing)
+# of features : 123/123 (testing)
