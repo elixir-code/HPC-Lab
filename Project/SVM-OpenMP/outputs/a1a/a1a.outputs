@@ -1,0 +1,88 @@
+Maximum Number of Threads = 1
+Fitted SVM model with training data in 1195.73 seconds.
+Predicted class labels for testing data in 24.0849 seconds.
+Accuracy = 0.838707
+Precision = 0.686313
+Recall = 0.606769
+F1-Score = 0.644094
+
+Maximum Number of Threads = 2
+Fitted SVM model with training data in 604.719 seconds.
+Predicted class labels for testing data in 14.2085 seconds.
+Accuracy = 0.838222
+Precision = 0.685033
+Recall = 0.606097
+F1-Score = 0.643152
+
+Maximum Number of Threads = 4
+Fitted SVM model with training data in 1589.9 seconds.
+Predicted class labels for testing data in 12.7448 seconds.
+Accuracy = 0.838416
+Precision = 0.685658
+Recall = 0.606097
+F1-Score = 0.643427
+
+Maximum Number of Threads = 6
+Fitted SVM model with training data in 669.508 seconds.
+Predicted class labels for testing data in 14.2376 seconds.
+Accuracy = 0.838416
+Precision = 0.685489
+Recall = 0.6065
+F1-Score = 0.64358
+
+Maximum Number of Threads = 8
+Fitted SVM model with training data in 598.881 seconds.
+Predicted class labels for testing data in 13.2541 seconds.
+Accuracy = 0.838674
+Precision = 0.686492
+Recall = 0.606097
+F1-Score = 0.643795
+
+Maximum Number of Threads = 12
+Fitted SVM model with training data in 582.259 seconds.
+Predicted class labels for testing data in 13.7397 seconds.
+Accuracy = 0.838416
+Precision = 0.685601
+Recall = 0.606232
+F1-Score = 0.643478
+
+Maximum Number of Threads = 16
+Fitted SVM model with training data in 740.158 seconds.
+Predicted class labels for testing data in 14.7316 seconds.
+Accuracy = 0.83848
+Precision = 0.685753
+Recall = 0.606366
+F1-Score = 0.643621
+
+Maximum Number of Threads = 20
+Fitted SVM model with training data in 1420.45 seconds.
+Predicted class labels for testing data in 15.2676 seconds.
+Accuracy = 0.838351
+Precision = 0.685393
+Recall = 0.606232
+F1-Score = 0.643387
+
+Maximum Number of Threads = 24
+Fitted SVM model with training data in 656.442 seconds.
+Predicted class labels for testing data in 16.0162 seconds.
+Accuracy = 0.838577
+Precision = 0.686066
+Recall = 0.606366
+F1-Score = 0.643758
+
+Maximum Number of Threads = 28
+Fitted SVM model with training data in 614.798 seconds.
+Predicted class labels for testing data in 17.0384 seconds.
+Accuracy = 0.838545
+Precision = 0.685849
+Recall = 0.606634
+F1-Score = 0.643814
+
+Maximum Number of Threads = 32
+Fitted SVM model with training data in 747.298 seconds.
+Predicted class labels for testing data in 18.5145 seconds.
+Accuracy = 0.838384
+Precision = 0.685554
+Recall = 0.606097
+F1-Score = 0.643382
+
