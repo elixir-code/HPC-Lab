@@ -1,0 +1,21 @@
+Dataset Name: a1a
+	
+	Source: UCI/Adult
+	# of classes: 2
+	# of data: 1,605/30,956 (testing)
+	# of features: 123/123 (testing)
+
+	Files:
+		o a1a
+		o a1a.t (testing)
+
+Dataset Name: a9a
+
+	Source: UCI/Adult
+	# of classes: 2
+	# of data: 32,561/16,281 (testing)
+	# of features: 123/123 (testing)
+
+	Files:
+		o a9a
+		o a9a.t (testing)
