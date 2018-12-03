@@ -17,3 +17,5 @@ Exercise 4: **Parallelizing Computation of Maximum Among Elements of N Matrices 
 ### Project: SVM Learning Algorithm
 
 OpenMP: **Analyzing Parallelizability of the SVM Classification Algorithm using OpenMP** \[[Code](Project/SVM-OpenMP/svm-openmp-codes)\] \[[Report](Project/SVM-OpenMP/report/report.pdf)\]
+
+OpenMPI: **Parallel Sequential Minimal Optimization (SMO) for Training of Support Vector Machines** \[[Code](Project/SVM-OpenMPI/svm-openmpi-codes)\] \[[Report](Project/SVM-OpenMPI/report/report.pdf)\]
